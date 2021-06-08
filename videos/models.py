@@ -1,6 +1,5 @@
 from django.db import models
 from djangodeletes.softdeletes import SoftDeletable, SoftDeleteQuerySet, SoftDeleteManager
-from channel import models as channel_models
 from django.contrib.postgres.fields import JSONField
 
 class Video(SoftDeletable, models.Model):
