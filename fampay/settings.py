@@ -127,11 +127,11 @@ CRONJOBS = [
 
 # some pre-required parameters to be passed to fetch the videos
 URL = "https://www.googleapis.com/youtube/v3/search"
-KEY = "AIzaSyDzL1Tk75N-3hIEeYlQbJnBr_IutTneINU"
+KEY = "AIzaSyC4iFqY_bcgDQ5tzFslB9_NVdgUhDtlOPE"
 SEARCH_QUERY = "cricket"
 ORDER_BY = "date"
 TYPE = "video"
-PUBLISHING_START_TIME = "2021-06-06T01:59:53Z"
+PUBLISHING_START_TIME = "2021-06-08T01:59:53Z"
 PART = "snippet"
 MAX_RESULTS = 50
 
