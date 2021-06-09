@@ -10,7 +10,8 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
 
 - A basic search API to search the stored videos using their title and description.
 
-- An optimises search api, so that it's able to search videos containing partial match for the search query.
+- An optimised search api, so that it's able to search videos containing partial match for the search query.
+- 
   Ex : A video with title 'How to make tea?' should match for the search query 'tea how'
   
  # How To Run the Project
@@ -22,9 +23,12 @@ Run `python3 manage.py crontab add .` to run the cronjob in the background to fe
 Navigate to `http://localhost:8000/admin`.
 
 Superuser Credentials:
+
 username : admin
+
 password : admin#123
 
 # How To Test the Project
 GET API End Point : http://localhost:8000/api/videos
+
 Search API End Point : http://localhost:8000/api/videos/?query=cricket
