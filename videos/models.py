@@ -2,6 +2,8 @@ from django.db import models
 from djangodeletes.softdeletes import SoftDeletable, SoftDeleteQuerySet, SoftDeleteManager
 from django.contrib.postgres.fields import JSONField
 
+
+# model to save videos data
 class Video(SoftDeletable, models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=250, null=True, blank=True)

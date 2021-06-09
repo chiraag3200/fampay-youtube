@@ -72,19 +72,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'fampay.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'fampay',
-#         'USER': 'chiraag',
-#         'PASSWORD': 'admin#123',
-#         'HOST': 'localhost'
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -131,15 +118,26 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+# cronjob to specify time interval and file to be executed
 CRONJOBS = [
     ('*/1 * * * *', 'fampay.cron.fetch_videos')
 ]
 
+
+# some pre-required parameters to be passed to fetch the videos
 URL = "https://www.googleapis.com/youtube/v3/search"
 KEY = "AIzaSyDzL1Tk75N-3hIEeYlQbJnBr_IutTneINU"
 SEARCH_QUERY = "cricket"
 ORDER_BY = "date"
 TYPE = "video"
-PUBLISHING_START_TIME = "2021-01-01T01:59:53Z"
+PUBLISHING_START_TIME = "2021-06-06T01:59:53Z"
 PART = "snippet"
 MAX_RESULTS = 50
+
+
+# pagination
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
